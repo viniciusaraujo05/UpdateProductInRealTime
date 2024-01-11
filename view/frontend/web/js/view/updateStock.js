@@ -33,8 +33,6 @@ define([
             ).done(
                 function (response) {
                     var productData = JSON.parse(response);
-
-                    console.log(productData.timeUpdate);
                     self.product({
                         name: productData.name,
                         price: productData.price,
