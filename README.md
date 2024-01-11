@@ -4,7 +4,7 @@ This module aims to add a product to the luma home page and update it in real ti
 
 # Installation:
 - Step 1 -   `composer require goit/show-product-home`
--  Step 2 -   `bin/magento setup:upgrade;`
+-  Step 2 -   `bin/magento setup:upgrade`
 
 
 # Config:
