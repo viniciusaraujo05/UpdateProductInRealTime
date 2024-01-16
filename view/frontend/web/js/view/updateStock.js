@@ -2,8 +2,9 @@ define([
     'ko',
     'uiComponent',
     'mage/url',
-    'mage/storage'
-], function (ko, Component, urlBuilder, storage) {
+    'mage/storage',
+    'jquery'
+], function (ko, Component, urlBuilder, storage, $) {
     'use strict';
 
     return Component.extend({
@@ -15,14 +16,13 @@ define([
             name: '',
             price: '',
             stockQty: '',
-            src: ''
+            src: '',
+            url: ''
         }),
 
         initialize: function () {
-            this._super(); 
-            console.log(this.getProduct);
-                
-            setInterval(this.getProduct(), 1000);
+            this._super();
+            this.getProduct();
         },
 
         getProduct: function () {
@@ -33,13 +33,17 @@ define([
             ).done(
                 function (response) {
                     var productData = JSON.parse(response);
-
                     self.product({
                         name: productData.name,
                         price: productData.price,
                         stockQty: productData.stockQty,
-                        src: productData.src
+                        src: productData.src,
+                        url: productData.url
                     });
+
+                    setTimeout(function () {
+                        self.getProduct();
+                    }, productData.timeUpdate);
                 }
             ).fail(
                 function (response) {
