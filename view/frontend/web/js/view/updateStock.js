@@ -12,13 +12,7 @@ define([
             template: 'Goit_ShowProductHome/product',
         },
 
-        product: ko.observable({
-            name: '',
-            price: '',
-            stockQty: '',
-            src: '',
-            url: ''
-        }),
+        product: ko.observable({}),
 
         initialize: function () {
             this._super();
@@ -43,7 +37,7 @@ define([
 
                     setTimeout(function () {
                         self.getProduct();
-                    }, productData.timeUpdate);
+                    }, 5000);
                 }
             ).fail(
                 function (response) {
