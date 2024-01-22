@@ -7,7 +7,7 @@
                    <argument name="jsLayout" xsi:type="array">
                        <item name="components" xsi:type="array">
                            <item name="product" xsi:type="array">
-                               <item name="component" xsi:type="string">Goit_ShowProductHome/js/view/updateProduct</item>
+                               <item name="component" xsi:type="string">Goit_ShowProductHome/js/view/product</item>
                            </item>
                        </item>
                    </argument>
