@@ -11,6 +11,6 @@ This module aims to add a product to the luma home page and update it in real ti
 - Chose a product to display: Store > Configuration > Goit > Product Home > Products to Display in Home
 - Choose how often the product should be updated: Store > Configuration > Goit > Product Home > Update Time
 
-# Requisitos 
+# Requirements 
 - Magento: 2.4.6
 - Php: 8.1.0; 8.2.0
